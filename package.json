@@ -1,0 +1,43 @@
+{
+  "name": "three-column-layout",
+  "version": "1.0.0",
+  "description": "Otus,Markup,HTML,CSS",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel",
+    "build": "parcel build",
+    "lint": "html-linter --config ./html-linter.json src/**/*.html && npx stylelint \"**/*.css\" --fix",
+    "formatting": "prettier --write ./",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkremnev/three-column-layout.git"
+  },
+  "keywords": [
+    "Otus",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Maxim Kremnev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkremnev/three-column-layout/issues"
+  },
+  "homepage": "https://github.com/mkremnev/three-column-layout#readme",
+  "devDependencies": {
+    "html-linter": "^1.1.1",
+    "husky": "^6.0.0",
+    "lint-staged": "^12.3.8",
+    "parcel": "^2.4.1",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.7.0",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0"
+  },
+  "lint-staged": {
+    "*.{html}": "html-linter --config ./html-linter.json",
+    "*.{css}": "npx stylelint \"**/*.css\" --fix",
+    "*.{html,md}": "prettier --write"
+  }
+}
